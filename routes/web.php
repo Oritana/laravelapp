@@ -20,3 +20,11 @@ Route::post('hello','HelloController@post');
 
 //ーーーー実習用ーーーーー
 Route::get('jissyu2', 'JissyuController@index');
+
+//Jisyu3_1
+Route::get('jisyu3_1','Jisyu3_1Controller@index');
+Route::post('jisyu3_1','Jisyu3_1Controller@post');
+
+//Jisyu3_2
+Route::get('jisyu3_2','Jisyu3_2Controller@index');     //Route::get(アドレス,コントローラ名@アクション名)
+Route::post('jisyu3_2','Jisyu3_2Controller@post');     //Route::post(アドレス,コントローラ名@アクション名)
