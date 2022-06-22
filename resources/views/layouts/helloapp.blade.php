@@ -1,6 +1,7 @@
+{{-- ベース(親)となるソースコード --}}
 <html>
 <head>
-   <title>@yield('title')</title>
+   <title>@yield('title')</title>      {{-- タイトルのコンテンツを設定 --}}
    <style>
    body {font-size:16pt; color:#999; margin: 5px; }
    h1 { font-size:50pt; text-align:right; color:#f6f6f6;
@@ -14,8 +15,9 @@
    </style>
 </head>
 <body>
-   <h1>@yield('title')</h1>
-   @section('menubar')
+    
+   <h1>@yield('title')</h1>              {{-- タイトルを表示する --}}
+   @section('menubar')                   {{-- 子の@sectionの中に、@parentとすると親にあるセクションは子のsectionに上書きされず残すことができる(ここでは'※メニュー'が残って表示される) --}}
    <h2 class="menutitle">※メニュー</h2>
    <ul>
        <li>@show</li>
