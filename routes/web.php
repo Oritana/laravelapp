@@ -30,3 +30,8 @@ Route::get('jisyu3_2','Jisyu3_2Controller@index');     //Route::get(アドレス
 Route::post('jisyu3_2','Jisyu3_2Controller@post');     //Route::post(アドレス,コントローラ名@アクション名)
 
 Route::get('jisyu3_3','Jisyu3_3Controller@index');     //Route::post(アドレス,コントローラ名@アクション名)
+
+use App\Http\Middleware\HelloMiddleware;
+
+Route::get('hello','HelloController@index')
+    ->middleware(HelloMiddleware::class);

@@ -4,15 +4,13 @@ namespace App\Providers;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
-class HelloServiceProvider extends ServiceProvider
+class HelloServiceProvider extends ServiceProvider             /* サービスプロバイダの定義 */
 {
-   public function boot()
-   {
-       View::composer(
-           'hello.index', function($view){
-               $view->with('view_message', 'composer message!');
-           }
-       );
-   }
+    public function boot()
+    {
+       View::composer(                                          /* View:composerメソッドの実行 */
+           'hello.index', 'App\Http\Composers\HelloComposer'    /* View::composer(ビューの指定、関数またはクラス) */
+       );                                                       /* HelloComposerをビューコンポーザとして利用する */
+    }
 
 }

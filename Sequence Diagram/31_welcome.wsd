@@ -1,4 +1,5 @@
 @startuml 31_welcome
+skin rose
 actor ユーザ
 boundary ブラウザ
 control web.php
