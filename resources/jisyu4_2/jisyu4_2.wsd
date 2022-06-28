@@ -1,0 +1,24 @@
+@startuml
+skin rose
+actor ユーザ
+boundary ブラウザ
+control web.php
+control Jisyu4_2Controller
+boundary input.blade.php
+boundary output.blade.php
+
+ユーザ -> ブラウザ:該当ページをリクエスト[/Jisyu7]
+ブラウザ -> web.php: GET[/jisyu6]
+web.php -> Jisyu4_2Controller:@index
+Jisyu4_2Controller -> input.blade.php
+ユーザ -> input.blade.php:送信ボタンを押下
+input.blade.php -> web.php:POST
+web.php -> Jisyu4_2Controller:@post
+
+alt 成功
+Jisyu4_2Controller -> output.blade.php
+else エラー発生
+Jisyu4_2Controller -> input.blade.php
+end
+
+@enduml

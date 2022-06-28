@@ -38,3 +38,14 @@ Route::get('hello','HelloController@index')
 
 Route::get('hello','HelloController@index');
 Route::post('hello','HelloController@post');
+
+Route::get('Chapter3_2','Chapter3_2Controller@index');
+
+Route::get('ohara','OharaController@index');
+
+Route::get('jisyu4_1', 'Jisyu4_1Controller@index');
+Route::post('jisyu4_1', 'Jisyu4_1Controller@post');
+
+Route::get('jisyu4_2', 'Jisyu4_2Controller@index');
+Route::post('jisyu4_2', 'Jisyu4_2Controller@post');
+
