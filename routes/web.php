@@ -46,6 +46,8 @@ Route::get('ohara','OharaController@index');
 Route::get('jisyu4_1', 'Jisyu4_1Controller@index');
 Route::post('jisyu4_1', 'Jisyu4_1Controller@post');
 
-Route::get('jisyu4_2', 'Jisyu4_2Controller@index');
-Route::post('jisyu4_2', 'Jisyu4_2Controller@post');
+Route::get('jisyu4_2', 'Jisyu4_2Controller@index'); //Route::get(アドレス,コントローラ名@アクション名)
+Route::post('jisyu4_2', 'Jisyu4_2Controller@post');  //Route::post(アドレス,コントローラ名@アクション名)
 
+Route::get('jisyu4_3', 'Jisyu4_3Controller@index'); //Route::get(アドレス,コントローラ名@アクション名)
+Route::post('jisyu4_3', 'Jisyu4_3Controller@post');  //Route::post(アドレス,コントローラ名@アクション名)
