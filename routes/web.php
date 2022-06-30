@@ -49,3 +49,8 @@ Route::post('jisyu4_1', 'Jisyu4_1Controller@post');
 Route::get('jisyu4_2', 'Jisyu4_2Controller@index');
 Route::post('jisyu4_2', 'Jisyu4_2Controller@post');
 
+/* Kouka1 */
+Route::get('kouka1_1', 'Kouka1_1Controller@index');
+
+Route::get('kouka1_2', 'Kouka1_2Controller@index');
+Route::post('kouka1_2', 'Kouka1_2Controller@post');
