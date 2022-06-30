@@ -12,7 +12,7 @@ class Jisyu4_3Controller extends Controller
         $data = [
             'msg'=>'必要事項を記入してください。',
         ];
-        return view('jisyu4_3.input', $data);
+        return view('jisyu4_3.input', $data);    /* view(テンプレート,配列) */
     }
 
     public function post(Jisyu4_3Request $request)

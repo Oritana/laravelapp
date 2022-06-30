@@ -9,7 +9,7 @@ class Jisyu4_3Request extends FormRequest
 {
     public function authorize()
     {
-        if ($this->path() ==  'jisyu4_3') {       /* パスがjisyu4_3ならチェックする */
+        if ($this->path() ==  'jisyu4_3') {       /* パス(アクセスするアドレス)がjisyu4_3ならチェックする */
             return true;
         } else {
             return false;
