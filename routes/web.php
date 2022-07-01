@@ -49,3 +49,14 @@ Route::post('jisyu4_1', 'Jisyu4_1Controller@post');
 Route::get('jisyu4_2', 'Jisyu4_2Controller@index');
 Route::post('jisyu4_2', 'Jisyu4_2Controller@post');
 
+//------------------------トップページの表示-------------
+Route::get('hello/add', 'HelloController@add');
+Route::post('hello/add', 'HelloController@create');
+
+//--------------------データの更新-------------
+Route::get('hello/edit', 'HelloController@edit');
+Route::post('hello/edit', 'HelloController@update');
+
+//--------------------データの削除-------------
+Route::get('hello/del', 'HelloController@del');
+Route::post('hello/del', 'HelloController@remove');
