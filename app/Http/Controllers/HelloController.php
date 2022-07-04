@@ -73,4 +73,13 @@ public function update(Request $request)
       return redirect('/hello');
    }   
 
+   public function show(Request $request)
+    {
+   $name = $request->name;
+   $items = DB::table('people')
+       ->where('name', 'like', '%' . $name . '%')
+       ->orWhere('mail', 'like', '%' . $name . '%')
+       ->get();
+   return view('hello.show', ['items' => $items]);
+    }
 }
