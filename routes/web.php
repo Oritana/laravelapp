@@ -63,3 +63,7 @@ Route::post('hello/del', 'HelloController@remove');
 
 //-------------------- 5-20 ---------------------
 Route::get('hello/show', 'HelloController@show');
+
+
+
+
