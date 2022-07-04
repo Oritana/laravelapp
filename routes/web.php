@@ -54,3 +54,6 @@ Route::post('jisyu4_3', 'Jisyu4_3Controller@post');  //Route::post(アドレス,
 
 Route::get('jisyu9', 'Jisyu4_4Controller@index'); //Route::get(アドレス,コントローラ名@アクション名)
 Route::post('jisyu9', 'Jisyu4_4Controller@post');  //Route::post(アドレス,コントローラ名@アクション名)
+
+Route::get('jisyu10', 'Jisyu5_1Controller@index');
+Route::get('jisyu10/show', 'Jisyu5_1Controller@show');
