@@ -10,13 +10,13 @@ class Jissyu5_2Controller extends Controller
     public function index(Request $request)
     {
         $items = DB::select('select * from people');
-        return view('___(8)___', ['items' => $items]);
+        return view('jisyu5_2.index', ['items' => $items]);
     }
     public function show(Request $request)
     {
-        $param = ['id' => ___(9)___];
+        $param = ['id' => $request->id];
         $items = DB::select(
-            '___(10)___',
+            'select * from people where id = :id',
             $param
         );
         return view('jisyu5_2.show', ['items' => $items]);
@@ -24,15 +24,15 @@ class Jissyu5_2Controller extends Controller
 
     public function add(Request $request)
     {
-        return view('___(11)___');
+        return view('jisyu5_2.add');
     }
 
     public function create(Request $request)
     {
         $param = [
             'name' => $request->name,
-            'mail' => ___(12)___,
-            'age' => ___(13)___,
+            'mail' => $request->mail,
+            'age' => $request->age,
         ];
         DB::insert('insert into people (name, mail, age) values (:name, :mail, :age)', $param);
         return redirect('/jisyu11');
@@ -41,7 +41,7 @@ class Jissyu5_2Controller extends Controller
     {
         $param = ['id' => $request->id];
         $items = DB::select('select * from people where id = :id', $param);
-        return view('___(14)___', ___(15)___);
+        return view('jisyu5_2.edit', ['from' => $items[0]]);
     }
 
     public function update(Request $request)
@@ -52,7 +52,7 @@ class Jissyu5_2Controller extends Controller
             'mail' => $request->mail,
             'age' => $request->age,
         ];
-        DB::update('___(16)___', $param);
+        DB::update('update people set name =:name, mail = :mail, age = :age where id =:id', $param);
         return redirect('/jisyu11');
     }
 
@@ -66,7 +66,7 @@ class Jissyu5_2Controller extends Controller
     public function remove(Request $request)
     {
         $param = ['id' => $request->id];
-        DB::delete('___(17)___', $param);
-        return redirect('___(18)___');
+        DB::delete('delete from people where id = :id', $param);
+        return redirect('/jisyu11');
     }
 }
