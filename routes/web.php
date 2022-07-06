@@ -67,3 +67,6 @@ Route::get('hello/show', 'HelloController@show');
 //-------------------- 6-4 ---------------------
 Route::get('person', 'PersonController@index');
 
+//-------------------- 6-9 ---------------------
+Route::get('person/find', 'PersonController@find');
+Route::post('person/find', 'PersonController@search');
