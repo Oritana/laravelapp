@@ -1,0 +1,54 @@
+@startuml
+skin rose
+
+actor ユーザ
+boundary ブラウザ
+control web.php
+control Jisyu5_3Controller
+boundary index.blade.php
+boundary show.blade.php
+boundary add.blade.php
+boundary edit.blade.php
+boundary del.blade.php
+
+ユーザ->ブラウザ:該当ページをリクエスト[/jisyu12]
+ブラウザ->web.php:GET[/jisyu12]
+web.php->Jisyu5_3Controller:@index
+Jisyu5_3Controller->index.blade.php
+
+ユーザ->index.blade.php:詳細リンクを押下
+index.blade.php->web.php:GET[/jisyu12/show]
+web.php->Jisyu5_3Controller:@show
+Jisyu5_3Controller->show.blade.php
+
+ユーザ->index.blade.php:新規登録リンクを押下
+index.blade.php->web.php:GET[/jisyu12/add]
+web.php->Jisyu5_3Controller:@add
+Jisyu5_3Controller->add.blade.php
+
+ユーザ->add.blade.php:新規登録ボタンを押下
+add.blade.php->web.php:POST[/jisyu12/create]
+web.php->Jisyu5_3Controller:@create
+Jisyu5_3Controller->index.blade.php
+
+ユーザ->index.blade.php:更新リンクを押下
+index.blade.php->web.php:GET[/jisyu12/edit]
+web.php->Jisyu5_3Controller:@edit
+Jisyu5_3Controller->edit.blade.php
+
+ユーザ->edit.blade.php:更新ボタンを押下
+edit.blade.php->web.php:POST[/jisyu12/update]
+web.php->Jisyu5_3Controller:@update
+Jisyu5_3Controller->index.blade.php
+
+ユーザ->index.blade.php:削除リンクを押下
+index.blade.php->web.php:GET[/jisyu12/del]
+web.php->Jisyu5_3Controller:@del
+Jisyu5_3Controller->del.blade.php
+
+ユーザ->del.blade.php:削除ボタンを押下
+del.blade.php->web.php:POST[/jisyu12/remove]
+web.php->Jisyu5_3Controller:@remove
+Jisyu5_3Controller->index.blade.php
+
+@enduml
