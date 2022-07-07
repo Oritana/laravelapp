@@ -57,4 +57,16 @@ public function update(Request $request)
    $person->fill($form)->save();
    return redirect('/person');
 }
+
+public function delete(Request $request)
+{
+   $person = Person::find($request->id);
+   return view('person.del', ['form' => $person]);
+}
+
+public function remove(Request $request)
+{
+   Person::find($request->id)->delete();
+   return redirect('/person');
+}
 }
