@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class Jissyu5_2Controller extends Controller
+class Jisyu5_2Controller extends Controller
 {
     public function index(Request $request)
     {
@@ -19,7 +19,7 @@ class Jissyu5_2Controller extends Controller
             'select * from people where id = :id',
             $param
         );
-        return view('jisyu5_2.show', ['items' => $items]);
+        return view('jisyu5_2.index', ['items' => $items]);
     }
 
     public function add(Request $request)
