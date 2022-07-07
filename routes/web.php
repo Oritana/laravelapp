@@ -70,3 +70,11 @@ Route::get('person', 'PersonController@index');
 //-------------------- 6-9 ---------------------
 Route::get('person/find', 'PersonController@find');
 Route::post('person/find', 'PersonController@search');
+
+//-------------------- 6-21 ---------------------
+Route::get('person/add', 'PersonController@add');
+Route::post('person/add', 'PersonController@create');
+
+//-------------------- 6-24 ---------------------
+Route::get('person/edit', 'PersonController@edit');
+Route::post('person/edit', 'PersonController@update');
