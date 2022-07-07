@@ -70,3 +70,21 @@ Route::get('person', 'PersonController@index');
 //-------------------- 6-9 ---------------------
 Route::get('person/find', 'PersonController@find');
 Route::post('person/find', 'PersonController@search');
+
+//保存----------------- 6-21 ---------------------
+Route::get('person/add', 'PersonController@add');
+Route::post('person/add', 'PersonController@create');
+
+//更新----------------- 6-24 ---------------------
+Route::get('person/edit', 'PersonController@edit');
+Route::post('person/edit', 'PersonController@update');
+
+//削除----------------- 6-27 ---------------------
+Route::get('person/del', 'PersonController@delete');
+Route::post('person/del', 'PersonController@remove');
+
+//----------------- 6-34 ---------------------
+Route::get('board', 'BoardController@index');
+
+Route::get('board/add', 'BoardController@add');
+Route::post('board/add', 'BoardController@create');
