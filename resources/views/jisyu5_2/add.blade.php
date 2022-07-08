@@ -3,20 +3,19 @@
 @section('title', 'Jisyu')
 
 @section('menu_title')
-ユーザ情報詳細画面
-
+ユーザ情報新規登録画面
 @endsection
+
 @section('content')
+   <form action="/jisyu11/create" method="post">
    <table>
-   <tr><th>Name</th><th>Mail</th><th>Age</th></tr>
-   @foreach ($items as $item)
-       <tr>
-           <td>{{$item->name}}</td>
-           <td>{{$item->mail}}</td>
-           <td>{{$item->age}}</td>
-       </tr>
-   @endforeach
+      @csrf
+      <tr><th>name: </th><td><input type="text" name="name"></td></tr>
+      <tr><th>mail: </th><td><input type="text" name="mail"></td></tr>
+      <tr><th>age: </th><td><input type="text" name="age"></td></tr>
+      <tr><th></th><td><input type="submit" value="新規登録"></td></tr>
    </table>
+   </form>
 @endsection
 
 @section('footer')

@@ -19,7 +19,7 @@ class Jisyu5_2Controller extends Controller
             'select * from people where id = :id',
             $param
         );
-        return view('jisyu5_2.index', ['items' => $items]);
+        return view('jisyu5_2.show', ['items' => $items]);
     }
 
     public function add(Request $request)
@@ -41,7 +41,7 @@ class Jisyu5_2Controller extends Controller
     {
         $param = ['id' => $request->id];
         $items = DB::select('select * from people where id = :id', $param);
-        return view('jisyu5_2.edit', ['from' => $items[0]]);
+        return view('jisyu5_2.edit', ['items' => $items]);
     }
 
     public function update(Request $request)

@@ -60,10 +60,10 @@ Route::get('jisyu10/show', 'Jisyu5_1Controller@show');
 
 //----------Chapter5-2---------------------------
 Route::get('jisyu11', 'Jisyu5_2Controller@index');
-Route::get('jisyu11', 'Jisyu5_2Controller@show');
+Route::get('jisyu11/show', 'Jisyu5_2Controller@show');
 Route::get('jisyu11/add', 'Jisyu5_2Controller@add');
-Route::post('jisyu11/add', 'Jisyu5_2Controller@create');
+Route::post('jisyu11/create', 'Jisyu5_2Controller@create');
 Route::get('jisyu11/edit', 'Jisyu5_2Controller@edit');
-Route::post('jisyu11/edit', 'Jisyu5_2Controller@update');
+Route::post('jisyu11/update', 'Jisyu5_2Controller@update');
 Route::get('jisyu11/del', 'Jisyu5_2Controller@del');
-Route::post('jisyu11/del', 'Jisyu5_2Controller@remove');
+Route::post('jisyu11/remove', 'Jisyu5_2Controller@remove');

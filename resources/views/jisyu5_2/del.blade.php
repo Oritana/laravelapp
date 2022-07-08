@@ -1,13 +1,13 @@
-@extends('layouts.jissyu')
+@extends('layouts.jisyu')
 
-@section('title', 'Jissyu')
+@section('title', 'Jisyu')
 
 @section('menu_title')
-ユーザ情報更新画面
+ユーザ情報削除画面
 @endsection
 
 @section('content')
-   <form action="/jissyu11/update" method="post">
+   <form action="/jisyu11/remove" method="post">
    <table>
     @foreach ($items as $item)
       @csrf
@@ -19,7 +19,7 @@
       <tr><th>age: </th><td><input type="text" name="age"
          value="{{$item->age}}"></td></tr>
       <tr><th></th><td><input type="submit"
-         value="更新"></td></tr>
+         value="削除"></td></tr>
          @endforeach
    </table>
    </form>
