@@ -61,9 +61,13 @@ Route::post('hello/edit', 'HelloController@update');
 Route::get('hello/del', 'HelloController@del');
 Route::post('hello/del', 'HelloController@remove');
 
-//-------------------- 5-20 ---------------------
+//-------------------- テキスト5-20 ---------------------
 Route::get('hello/show', 'HelloController@show');
 
-//-------------------- 6-4 ---------------------
+//-------------------- テキスト6-4 ---------------------
 Route::get('person', 'PersonController@index');
+
+//-------------------- 実習6-1 ---------------------
+Route::get('jisyu13', 'Jisyu6_1Controller@index');
+Route::post('jisyu13/find', 'Jisyu6_1Controller@show');
 

@@ -1,0 +1,24 @@
+@startuml
+skin rose 
+actor ユーザ
+boundary ブラウザ
+control web.php
+control Jisyu6_1Controller
+entity Person
+boundary index.blade.php
+boundary show.blade.php
+
+ユーザ->ブラウザ:該当ページをリクエスト[/jisyu13]
+ブラウザ->web.php:GET[/jisyu13]
+web.php->Jisyu6_1Controller:@index
+Jisyu6_1Controller->Person:all()
+Person -->Jisyu6_1Controller
+Jisyu6_1Controller->index.blade.php
+ユーザ->ブラウザ:検索ボタンを押下
+ブラウザ->web.php:GET[/jisyu13/find]
+web.php->Jisyu6_1Controller:@find
+Jisyu6_1Controller->Person:where()->first()
+Person-->Jisyu6_1Controller
+Jisyu6_1Controller->show.blade.php
+
+@enduml
