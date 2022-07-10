@@ -46,24 +46,24 @@ Route::get('ohara','OharaController@index');
 Route::get('jisyu4_1', 'Jisyu4_1Controller@index');
 Route::post('jisyu4_1', 'Jisyu4_1Controller@post');
 
-Route::get('jisyu4_2', 'Jisyu4_2Controller@index'); //Route::get(アドレス,コントローラ名@アクション名)
-Route::post('jisyu4_2', 'Jisyu4_2Controller@post');  //Route::post(アドレス,コントローラ名@アクション名)
+Route::get('jisyu4_2', 'Jisyu4_2Controller@index');
+Route::post('jisyu4_2', 'Jisyu4_2Controller@post');  
 
-Route::get('jisyu4_3', 'Jisyu4_3Controller@index'); //Route::get(アドレス,コントローラ名@アクション名)
-Route::post('jisyu4_3', 'Jisyu4_3Controller@post');  //Route::post(アドレス,コントローラ名@アクション名)
+Route::get('jisyu4_3', 'Jisyu4_3Controller@index');
+Route::post('jisyu4_3', 'Jisyu4_3Controller@post');  
 
-Route::get('jisyu9', 'Jisyu4_4Controller@index'); //Route::get(アドレス,コントローラ名@アクション名)
-Route::post('jisyu9', 'Jisyu4_4Controller@post');  //Route::post(アドレス,コントローラ名@アクション名)
+Route::get('jisyu9', 'Jisyu4_4Controller@index');
+Route::post('jisyu9', 'Jisyu4_4Controller@post');  
 
 Route::get('jisyu10', 'Jisyu5_1Controller@index');
 Route::get('jisyu10/show', 'Jisyu5_1Controller@show');
 
 //----------Chapter5-2---------------------------
-Route::get('jisyu11', 'Jisyu5_2Controller@index');
-Route::get('jisyu11/show', 'Jisyu5_2Controller@show');
-Route::get('jisyu11/add', 'Jisyu5_2Controller@add');
-Route::post('jisyu11/create', 'Jisyu5_2Controller@create');
-Route::get('jisyu11/edit', 'Jisyu5_2Controller@edit');
-Route::post('jisyu11/update', 'Jisyu5_2Controller@update');
-Route::get('jisyu11/del', 'Jisyu5_2Controller@del');
-Route::post('jisyu11/remove', 'Jisyu5_2Controller@remove');
+Route::get('jisyu11', 'Jisyu5_2Controller@index');           
+Route::get('jisyu11/show', 'Jisyu5_2Controller@show');       
+Route::get('jisyu11/add', 'Jisyu5_2Controller@add');         
+Route::post('jisyu11/create', 'Jisyu5_2Controller@create');   
+Route::get('jisyu11/edit', 'Jisyu5_2Controller@edit');       
+Route::post('jisyu11/update', 'Jisyu5_2Controller@update');   
+Route::get('jisyu11/del', 'Jisyu5_2Controller@del');          //Route::get(アドレス,コントローラ名@アクション名)
+Route::post('jisyu11/remove', 'Jisyu5_2Controller@remove');   //Route::post(アドレス,コントローラ名@アクション名)

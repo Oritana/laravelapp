@@ -1,3 +1,4 @@
+{{-- /jisyu11/add アクションにcreate処理を用意 --}}
 @extends('layouts.jisyu')
 
 @section('title', 'Jisyu')
@@ -7,7 +8,7 @@
 @endsection
 
 @section('content')
-   <form action="/jisyu11/create" method="post">
+   <form action="/jisyu11/create" method="post">  {{-- 新規登録クリック後、create処理で一覧(/jisyu11)を表示する --}}
    <table>
       @csrf
       <tr><th>name: </th><td><input type="text" name="name"></td></tr>
