@@ -16,11 +16,10 @@ class HelloController extends Controller
 {
    $sort = $request->sort;
    $items = Person::orderBy($sort, 'asc')
-      ->simplePaginate(5);
+       ->paginate(5);
    $param = ['items' => $items, 'sort' => $sort];
    return view('hello.index', $param);
 }
-
 
    public function post(Request $request)
    {
