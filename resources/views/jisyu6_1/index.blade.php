@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-    <form action="/jisyu6_1/find" method="post">
+    <form action="/jisyu13/find" method="post">
     @csrf
     <input type="text" name="input" value="{{$input}}">
     <input type="submit" value="検索">
@@ -16,7 +16,7 @@
    <tr><th>Name(Age)</th><th>Mail</th></tr>
    @foreach ($items as $item)
        <tr>
-           <td>{{$item->name}}</td>
+           <td>{{$item->getData()}}</td>
            <td>{{$item->mail}}</td>
        </tr>
    @endforeach

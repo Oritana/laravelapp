@@ -69,5 +69,5 @@ Route::get('person', 'PersonController@index');
 
 //-------------------- 実習6-1 ---------------------
 Route::get('jisyu13', 'Jisyu6_1Controller@index');
-Route::post('jisyu13/find', 'Jisyu6_1Controller@show');
+Route::post('jisyu13/find', 'Jisyu6_1Controller@find');
 

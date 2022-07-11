@@ -1,6 +1,6 @@
-@extends('layouts.jisyu')
+@extends('layouts.jissyu')
 
-@section('title', 'Jisyu')
+@section('title', 'Jissyu')
 
 @section('menu_title')
 ユーザ情報詳細画面
@@ -19,3 +19,4 @@
 @section('footer')
 copyright 2020 東京情報クリエイター工学院専門学校.
 @endsection
+
