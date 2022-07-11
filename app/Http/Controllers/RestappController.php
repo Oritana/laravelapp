@@ -28,7 +28,7 @@ class RestappController extends Controller
     $restdata = new Restdata;
     $form = $request->all();
     unset($form['_token']);
-    $restdata->fill($form)->save();
+    $restdata->fill($form)->save();  /* レコードインスタンスが登録される */
     return redirect('/rest');
    }
 
