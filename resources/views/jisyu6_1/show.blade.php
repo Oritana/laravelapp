@@ -1,6 +1,6 @@
-@extends('layouts.jissyu')
+@extends('layouts.jisyu')
 
-@section('title', 'Jissyu')
+@section('title', 'Jisyu')
 
 @section('menu_title')
 ユーザ情報詳細画面

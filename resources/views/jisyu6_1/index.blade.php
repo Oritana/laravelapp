@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-    <form action="/jisyu13/find" method="post">
+    <form action="/jisyu13/find" method="post">   {{-- 検索をクリックすると、actionが実行され/jisyu13/findで結果表示 --}}
     @csrf
     <input type="text" name="input" value="{{$input}}">
     <input type="submit" value="検索">

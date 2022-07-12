@@ -15,7 +15,7 @@ class Jisyu6_1Controller extends Controller
     }
     public function find(Request $request)
     {
-        $item = Person::where('name', $request-> input)->first();
+        $item = Person::where('id', $request-> input)->first();
         return view('jisyu6_1.show', ['item' => $item]);
     }
 }
