@@ -1,5 +1,4 @@
-<?php                                       /* DBがないエラーがでる場合「.env」の*/
-                                            /* DB_DATABASE=database_test　を DB_DATABASE=databaseに変更 */
+<?php                                       /* DBがないエラーがでる場合「.env」のDB_DATABASE=database_test　を DB_DATABASE=databaseに変更*/
 namespace App\Http\Controllers;
 
 use App\Person;
@@ -15,7 +14,7 @@ class Jisyu6_1Controller extends Controller
     }
     public function find(Request $request)
     {
-        $item = Person::where('id', $request-> input)->first();
+        $item = Person::where('name', $request-> input)->first();
         return view('jisyu6_1.show', ['item' => $item]);
     }
 }
