@@ -7,10 +7,10 @@
 @endsection
 
 @section('content')
-@if (count($error) > 0)
+@if (count($errors) > 0)
 <div>
     <ul>
-        @foreach (___(16)___ as ___(17)___)
+        @foreach ($errors->all() as $error)
             <li>{{ $error }}</li>
         @endforeach
     </ul>

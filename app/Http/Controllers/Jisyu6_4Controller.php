@@ -9,22 +9,22 @@ class Jisyu6_4Controller extends Controller
 {
     public function index(Request $request)
     {
-        $items = ___(7)___;
-        return view('jissyu6_4.index', ['items' => $items]);
+        $items = Subject::all();
+        return view('jisyu6_4.index', ['items' => $items]);
     }
 
     public function add(Request $request)
     {
-        return view('___(8)___');
+        return view('jisyu6_4.add');
     }
 
     public function create(Request $request)
     {
         $this->validate($request, Subject::$rules);
-        $subject = ___(9)___;
-        $form = ___(10)___;
+        $subject =new Subject ;
+        $form = $request->all();
         unset($form['_token']);
-        $subject->___(11)___;
-        return redirect('/jissyu15');
+        $subject->fill($form)->save();
+        return redirect('/jisyu15');
     }
 }

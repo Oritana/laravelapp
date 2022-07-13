@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-<a href="/jisyu15/id ">新規登録</a>
+<a href="/jisyu15/add ">新規登録</a>
    <table>
    <tr><th>Data</th></tr>
    @foreach ($items as $item)
