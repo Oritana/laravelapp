@@ -14,7 +14,7 @@ class Jisyu6_5Controller extends Controller
 
     public function show()
     {
-        $items = Person::show;
-        return view('___(8)___', ['items' => $items]);
+        $items = Person::all();
+        return view('jisyu6_5.show', ['items' => $items]);
     }
 }
