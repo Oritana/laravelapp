@@ -67,7 +67,7 @@ class Jisyu6_3Controller extends Controller
 
     public function remove(Request $request)
     {
-        Person::find($request->id)->del();
+        Person::find($request->id)->delete();
         return redirect('/jisyu14');
     }
 
