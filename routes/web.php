@@ -90,3 +90,9 @@ Route::post('jisyu15/create', 'Jisyu6_4Controller@create');
 //-------------------- 実習6-5 ---------------------
 Route::get('jisyu16', 'Jisyu6_5Controller@index');
 Route::get('jisyu16/show', 'Jisyu6_5Controller@show');
+
+//-------------------- 実習6-6 ---------------------
+Route::get('task', 'TaskController@index');
+Route::get('task/add', 'TaskController@add');
+Route::post('task/add', 'TaskController@    ');
+Route::post('task/del', 'TaskController@    ');
