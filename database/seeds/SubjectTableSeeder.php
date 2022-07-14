@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class SubjectTableSeeder extends Seeder
 {
@@ -28,6 +29,7 @@ class SubjectTableSeeder extends Seeder
             'name' => 'Vue.js',
         ];
         DB::table('subjects')->insert($param);
+
 }
 }
 

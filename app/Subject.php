@@ -9,7 +9,7 @@ class Subject extends Model
     protected $guarded = array('id');
 
     public static $rules = array(
-       'person_id' => 'required|exists:person_id',
+       'person_id' => 'required|exists:people,id',
        'name' => 'required|min:0|max:10',
    );
 
