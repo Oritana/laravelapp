@@ -1,0 +1,69 @@
+@startuml
+skin rose
+actor ユーザ
+boundary ブラウザ
+control web.php
+control Jisyu6_3Controller
+entity Person
+boundary index.blade.php
+boundary show.blade.php
+boundary add.blade.php
+boundary edit.blade.php
+boundary del.blade.php
+
+ユーザ->ブラウザ:該当ページをリクエスト[/jisyu14]
+ブラウザ->web.php:GET[/jisyu14]
+web.php->Jisyu6_3Controller:@index
+Jisyu6_3Controller->Person:all()
+Person->Jisyu6_3Controller
+Jisyu6_3Controller->index.blade.php
+ユーザ->index.blade.php:検索ボタンを押下
+index.blade.php->web.php:GET[/jisyu14/find]
+web.php->Jisyu6_3Controller:@find
+Jisyu6_3Controller->Person:where()->first()
+Person->Jisyu6_3Controller
+Jisyu6_3Controller->show.blade.php
+ユーザ->index.blade.php:詳細リンクを押下
+index.blade.php->web.php:GET[/jisyu14/show]
+web.php->Jisyu6_3Controller:@show
+Jisyu6_3Controller->Person:where()->first()
+Person->Jisyu6_3Controller
+Jisyu6_3Controller->show.blade.php
+ユーザ->index.blade.php:新規登録リンクを押下
+index.blade.php->web.php:GET[/jisyu14/add]
+web.php->Jisyu6_3Controller:@add
+Jisyu6_3Controller->add.blade.php
+ユーザ->add.blade.php:新規登録ボタンを押下
+add.blade.php->web.php:POST[/jisyu14/create]
+web.php->Jisyu6_3Controller:@create
+Jisyu6_3Controller->Person:all()
+Person->Jisyu6_3Controller
+Jisyu6_3Controller->index.blade.php
+ユーザ->index.blade.php:更新リンクを押下
+index.blade.php->web.php:GET[/jisyu14/edit]
+web.php->Jisyu6_3Controller:@edit
+Jisyu6_3Controller->Person:find()
+Person->Jisyu6_3Controller
+Jisyu6_3Controller->edit.blade.php
+ユーザ->edit.blade.php:更新ボタンを押下
+edit.blade.php->web.php:POST[/jisyu14/update]
+web.php->Jisyu6_3Controller:@update
+Jisyu6_3Controller->Person:find()
+Person->Jisyu6_3Controller
+Jisyu6_3Controller->index.blade.php
+ユーザ->index.blade.php:削除リンクを押下
+index.blade.php->web.php:GET[/jisyu14/del]
+web.php->Jisyu6_3Controller:@del
+Jisyu6_3Controller->Person:find()
+Person->Jisyu6_3Controller
+Jisyu6_3Controller->del.blade.php
+ユーザ->del.blade.php:削除ボタンを押下
+del.blade.php->web.php:POST[/jisyu14/remove]
+web.php->Jisyu6_3Controller:@remove
+Jisyu6_3Controller->Person:find()->delete()
+Person->Jisyu6_3Controller
+Jisyu6_3Controller->index.blade.php
+
+
+
+@enduml

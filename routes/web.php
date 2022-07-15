@@ -61,10 +61,10 @@ Route::post('hello/edit', 'HelloController@update');
 Route::get('hello/del', 'HelloController@del');
 Route::post('hello/del', 'HelloController@remove');
 
-//-------------------- 5-20 ---------------------
+//-------------------- テキスト5-20 ---------------------
 Route::get('hello/show', 'HelloController@show');
 
-//-------------------- 6-4 ---------------------
+//-------------------- テキスト6-4 ---------------------
 Route::get('person', 'PersonController@index');
 
 //-------------------- 6-9 ---------------------
@@ -124,3 +124,32 @@ Route::post('kouka2_2/update', 'Kouka2_2Controller@update');
 Route::get('kouka2_2/del', 'Kouka2_2Controller@del');
 Route::post('kouka2_2/remove', 'Kouka2_2Controller@remove');
 
+//-------------------- 実習6-1 ---------------------
+Route::get('jisyu13', 'Jisyu6_1Controller@index');
+Route::post('jisyu13/find', 'Jisyu6_1Controller@find');
+
+//-------------------- 実習6-3 ---------------------
+Route::get('jisyu14', 'Jisyu6_3Controller@index');
+Route::post('jisyu14/find', 'Jisyu6_3Controller@find');
+Route::get('jisyu14/show', 'Jisyu6_3Controller@show');
+Route::get('jisyu14/add', 'Jisyu6_3Controller@add');
+Route::post('jisyu14/create', 'Jisyu6_3Controller@create');
+Route::get('jisyu14/edit', 'Jisyu6_3Controller@edit');
+Route::post('jisyu14/update', 'Jisyu6_3Controller@update');
+Route::get('jisyu14/del', 'Jisyu6_3Controller@del');
+Route::post('jisyu14/remove', 'Jisyu6_3Controller@remove');
+
+//-------------------- 実習6-4 ---------------------
+Route::get('jisyu15', 'Jisyu6_4Controller@index');
+Route::get('jisyu15/add', 'Jisyu6_4Controller@add');
+Route::post('jisyu15/create', 'Jisyu6_4Controller@create');
+
+//-------------------- 実習6-5 ---------------------
+Route::get('jisyu16', 'Jisyu6_5Controller@index');
+Route::get('jisyu16/show', 'Jisyu6_5Controller@show');
+
+//-------------------- 実習6-6 ---------------------
+Route::get('task', 'TaskController@index');
+Route::get('task/add', 'TaskController@add');
+Route::post('task/add', 'TaskController@    ');
+Route::post('task/del', 'TaskController@    ');
